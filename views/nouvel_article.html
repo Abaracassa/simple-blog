@@ -1,0 +1,38 @@
+<!DOCTYPE html >
+<html>
+  <head>
+      <title>Création d'articles</title> 
+  </head>
+
+  style
+        include css/bootstrap.min.css
+        include css/main.css
+
+  <body>
+    <div class="container">
+    <h2> Création d'un nouvel article</h1>
+    <form id="articleCreation" action="/new_article" method="post">
+        <div class="col-md-6">
+                <label>Titre de l'Article <font color="red">*</font></label>
+                <input name="nom" type="text" class="form-control" id="titre" aria-describedby="emailHelp" required>
+        </div>
+            <div class="col-md-6">
+                <label>Auteur <font color="red">*</font></label>
+                <input name="auteur" type="text" class="form-control" id="auteur" required>
+            </div>
+            <div class="col-md-10">
+                <label>Résumé de l'article</label>
+                <input name="resume" type="text" class="form-control" id="resume">
+            </div>
+            <div class="col-md-10">
+                <label>Contenu de l'article <font color="red">*</font></label>
+                <textarea name="contenu" class="form-control z-depth-1" id="contenu" rows="10" placeholder="Ecrivez ici..." required></textarea>
+            </div>
+        <br><br>
+        <button type="submit" class="btn btn-success" role="button">Créer l'Article</button>
+        <br><br>
+        <small type="text"><font color="red">* champs obligatoires </font> </small>
+    </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html >
+<html>
+  <head>
+      <title>Articles</title> 
+  </head>
+  style
+      include css/bootstrap.min.css
+      include css/main.css      
+  <body>
+      <div class="content-wrapper">
+        <div class="container-fluid"><div class="dropdown">
+          <div class="card mb-3">
+            <div class="card-header">
+            <i class="fa fa-table"></i> Articles Présents sur le Site</div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-stripered table-bordered" id="articleTable">
+                    <thead>
+                    <tr>
+                      <th>Nom de l'article</th>
+                      <th>Auteur de l'article</th>
+                      <th>Date de rédaction</th>
+                      <th>Résumé</th>
+                    </tr>
+                    </thead>
+                    each document in allDoc
+                      <tr>
+                        <td><a href="http://localhost:8080/post/#{document.id}">#{document.titre}</a></td>
+                        <td>#{document.auteur}</td>
+                        <td>#{document.date}</td>
+                        <td>#{document.resume}</td>            
+                      </tr> 
+                      <tr>
+                        <td>Contenu : <br><br> #{document.contenu}</td>
+                      </tr>       
+                  </table>
+                  <a href="http://localhost:8080" role="button" class="btn btn-primary">Retour au menu</a>    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      script(src="/js/bootstrap.min.js")
+      script (src="/js/dataTables.bootstrap4.js")
+      script (src="/js/jquery.dataTables.js")
+  </body>
+</html>
